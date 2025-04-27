@@ -33,7 +33,6 @@ Before we deep dive into the contract, let's identify the license and declare th
 
 ```
 // SPDX-License-Identifier: MIT
-
 pragma solidity ^0.8.27;
 ```
 
@@ -618,31 +617,31 @@ Before we begin, ensure you have the following:
 
 You can also go ahead and paste the smart contract into a new Solidity file.
 
-![](./The Complete Guide to Building a Full-Stack Web3 Dapp on Base L2 _ Blog _ The Graph_files/Screenshot_2024-11-08_at_5.07.38_PM.png)
+![](./images/Screenshot_2024-11-08_at_5.07.38_PM.png)
 
 1.  Change the Solidity compiler to match the version of Solidity we used to write our smart contract and hit the “Compile EtherCoinFlip.sol” button!
 
-![](./The Complete Guide to Building a Full-Stack Web3 Dapp on Base L2 _ Blog _ The Graph_files/Screenshot_2024-11-08_at_5.14.53_PM.png)
+![](./images/Screenshot_2024-11-08_at_5.14.53_PM.png)
 
 1.  Once you set the compiler to the correct version, and clicked compile, you’re ready to deploy it to testnet! This can be done with Remix’s built in testing feature, which allows you to [test in multiple environments](https://remix-ide.readthedocs.io/en/latest/run.html).
 
 We are going to test the smart contract using injected provider MetaMask.
 
-![](./The Complete Guide to Building a Full-Stack Web3 Dapp on Base L2 _ Blog _ The Graph_files/Screenshot_2024-11-08_at_5.22.51_PM.png)
+![](./images/Screenshot_2024-11-08_at_5.22.51_PM.png)
 
 1.  Once you have your MetaMask connected, you can click the “Deploy” button to deploy `EtherCoinFlip.sol` to the blockchain!
 
 Make sure your [MetaMask is set to Base Sepolia](https://docs.base.org/docs/using-base/#metamask), and then approve the transaction.
 
-![](./The Complete Guide to Building a Full-Stack Web3 Dapp on Base L2 _ Blog _ The Graph_files/Screenshot_2024-11-08_at_5.24.46_PM.png)
+![](./images/Screenshot_2024-11-08_at_5.24.46_PM.png)
 
 1.  Congratulations, you have deployed a smart contract to Base Sepolia! You can begin interacting with the smart contract under the “Deployed Contracts” tab, which will allow you to call the contract’s functions:
 
-![](./The Complete Guide to Building a Full-Stack Web3 Dapp on Base L2 _ Blog _ The Graph_files/Screenshot_2024-11-08_at_5.27.33_PM.png)
+![](./images/Screenshot_2024-11-08_at_5.27.33_PM.png)
 
 1.  When starting new coin flips with the `newCoinFlip()` function, make sure you assign a value in Ether, which will be the wager (or msg.value).
 
-![](./The Complete Guide to Building a Full-Stack Web3 Dapp on Base L2 _ Blog _ The Graph_files/Screenshot_2024-11-08_at_5.30.39_PM.png)
+![](./images/Screenshot_2024-11-08_at_5.30.39_PM.png)
 
 Once you have started a few coin flips, you can also end coin flips from another wallet. Simply call the `endCoinFlip()` function with the correct amount in the value field, and the correct coin flip ID.
 
@@ -666,11 +665,15 @@ On your local machine, run one of the following commands:
 
 Using  [npm](https://www.npmjs.com/):
 
+```
 npm install -g @graphprotocol/graph-cli@latest
+```
 
 Using  [yarn](https://yarnpkg.com/):
 
+```
 yarn global add @graphprotocol/graph-cli
+```
 
 ### **2\. Create your subgraph⁠**[](https://thegraph.com/docs/en/quick-start/#2-create-your-subgraph)
 
@@ -684,7 +687,9 @@ Click "Create a Subgraph". It is recommended to name the subgraph in Title Case:
 
 The following command initializes your subgraph from an existing contract:
 
+```
 graph init
+```
 
 Note: If your contract was verified on Etherscan, then the ABI will automatically be created in the CLI. Otherwise, you will need to provide the ABI while using the CLI.
 
@@ -705,7 +710,7 @@ When you initialize your subgraph, the CLI will ask you for the following inform
 
 See the following screenshot for an example for what to expect when initializing your subgraph:
 
-![](./The Complete Guide to Building a Full-Stack Web3 Dapp on Base L2 _ Blog _ The Graph_files/CLI-Example.png)
+![](./images/CLI-Example.png)
 
 ### **4\. Write your subgraph⁠**[](https://thegraph.com/docs/en/quick-start/#4-write-your-subgraph)
 
@@ -732,11 +737,13 @@ Remember, deploying is not the same as publishing.
 
 2.  Authenticate and deploy your subgraph. The deploy key can be found on the subgraph's page in Subgraph Studio.
 
-![](./The Complete Guide to Building a Full-Stack Web3 Dapp on Base L2 _ Blog _ The Graph_files/fixed-subgraph-studio.jpg)
+![](./images/fixed-subgraph-studio.jpg)
 
+```
 graph auth <DEPLOY_KEY>
 
 graph deploy <SUBGRAPH_SLUG>
+```
 
 The CLI will ask for a version label.
 
@@ -750,7 +757,7 @@ If you’d like to examine your subgraph before publishing it to the network, yo
 - Analyze your subgraph in the dashboard to check information.
 - Check the logs on the dashboard to see if there are any errors with your subgraph. The logs of an operational subgraph will look like this:
 
-![](./The Complete Guide to Building a Full-Stack Web3 Dapp on Base L2 _ Blog _ The Graph_files/subgraph-logs-image.52c55bda.png)
+![](./images/subgraph-logs-image.52c55bda.png)
 
 ### **7\. Publish your subgraph to The Graph Network⁠**[](https://thegraph.com/docs/en/quick-start/#7-publish-your-subgraph-to-the-graph-network)
 
@@ -772,7 +779,7 @@ To learn more about curation, read  [Curating](https://thegraph.com/docs/en/net
 
 To save on gas costs, you can curate your subgraph in the same transaction you publish it by selecting this option:
 
-![](./The Complete Guide to Building a Full-Stack Web3 Dapp on Base L2 _ Blog _ The Graph_files/studio-publish-modal.4bb2696b.png)
+![](./images/studio-publish-modal.4bb2696b.png)
 
 **8\. Query your subgraph⁠**[](https://thegraph.com/docs/en/quick-start/#8-query-your-subgraph)
 
@@ -803,21 +810,27 @@ In this section, we'll cover:
 
 Use `create-react-app` on the command line to bootstrap your project:
 
+```
 npx create-react-app ether-coin-flip
+```
 
 This should create a fresh React project in your IDE:
 
-![](./The Complete Guide to Building a Full-Stack Web3 Dapp on Base L2 _ Blog _ The Graph_files/Screenshot_2024-11-27_at_4.42.53_PM.png)
+![](./images/Screenshot_2024-11-27_at_4.42.53_PM.png)
 
 Navigate into the project directory:
 
+```
 cd ether-coin-flip
+```
 
 #### 2\. Install Required Dependencies
 
 We'll need several packages to interact with the blockchain and handle data fetching:
 
+```
 npm install ethers graphql graphql-request @tanstack/react-query
+```
 
 - **ethers**: Library for interacting with the Ethereum blockchain.
 - **graphql** and **graphql-request**: For querying The Graph's API.
@@ -833,15 +846,13 @@ First, we'll take a look at the `App.js` file and explore each section of the co
 
 ### Building a React app using Ethers
 
+```javascript
 import React, { useState } from "react";
-
 import "./App.css";
-
 import ABI from "./components/ABI.json";
-
 import { ethers } from "ethers";
-
 import Dashboard from "./components/Dashboard.js";
+```
 
 - **Imports**:
 
@@ -853,47 +864,41 @@ import Dashboard from "./components/Dashboard.js";
 
 ---
 
-const contractAddress \= "0xd3037A0CFfADA943253A0CCc84593cd7b79E1ABd";
-
-const abi \= ABI;
+```javascript
+const contractAddress = "0xd3037A0CFfADA943253A0CCc84593cd7b79E1ABd";
+const abi = ABI;
+```
 
 - **contractAddress**: The address where your `EtherCoinFlip` contract is deployed on Base Sepolia.
 - **abi**: The ABI of your contract imported from `ABI.json`.
 
 ---
 
+```javascript
 // Using Base Sepolia
-
 const baseSepoliaChainId \= "84532";
 
 const baseSepoliaParams \= {
-
-chainId: baseSepoliaChainId,
-
-chainName: "Base Sepolia",
-
-nativeCurrency: {
-
-    name: "Sepolia ETH",
-
-    symbol: "ETH",
-
-    decimals: 18,
-
-},
-
-rpcUrls: \["https://sepolia.base.org"\],
-
-blockExplorerUrls: \["https://base-sepolia.blockscout.com/"\],
-
+  chainId: baseSepoliaChainId,
+  chainName: "Base Sepolia",
+  nativeCurrency: {
+      name: "Sepolia ETH",
+      symbol: "ETH",
+      decimals: 18,
+  },
+  rpcUrls: \["https://sepolia.base.org"\],
+  blockExplorerUrls: \["https://base-sepolia.blockscout.com/"\],
 };
+```
 
 - **baseSepoliaChainId**: The chain ID for the Base Sepolia network.
 - **baseSepoliaParams**: Network parameters required to add or switch to Base Sepolia in MetaMask.
 
 ---
 
+```javascript
 let provider, signer;
+```
 
 - **provider**: An ethers.js provider to interact with the blockchain.
 - **signer**: An ethers.js signer representing the user's wallet.
@@ -902,53 +907,33 @@ let provider, signer;
 
 #### Function: `switchToBaseSepolia`
 
+```javascript
 async function switchToBaseSepolia() {
-
-try {
-
-    const currentChainId \= await provider.send("eth\_chainId", \[\]);
+  try {
+    const currentChainId = await provider.send("eth_chainId", []);
 
     if (currentChainId !== baseSepoliaChainId) {
-
       try {
-
-        await provider.send("wallet\_switchEthereumChain", \[
-
+        await provider.send("wallet_switchEthereumChain", [
           { chainId: baseSepoliaChainId },
-
-        \]);
-
+        ]);
       } catch (switchError) {
-
-        if (switchError.code \=== 4902) {
-
+        if (switchError.code === 4902) {
           try {
-
-            await provider.send("wallet\_addEthereumChain", \[baseSepoliaParams\]);
-
+            await provider.send("wallet_addEthereumChain", [baseSepoliaParams]);
           } catch (addError) {
-
             console.error("Failed to add Base Sepolia network:", addError);
-
           }
-
         } else {
-
           console.error("Failed to switch to Base Sepolia:", switchError);
-
         }
-
       }
-
     }
-
-} catch (error) {
-
+  } catch (error) {
     console.error("Failed to get chain ID or switch network:", error);
-
+  }
 }
-
-}
+```
 
 - **Purpose**: Ensures the user's MetaMask is connected to the Base Sepolia network.
 - **Steps**:
@@ -966,11 +951,11 @@ try {
 
 #### Component: `App`
 
+```javascript
 function App() {
-
-const \[isConnected, setIsConnected\] \= useState(false);
-
-const \[contractInstance, setContractInstance\] \= useState(null);
+  const [isConnected, setIsConnected] = useState(false);
+  const [contractInstance, setContractInstance] = useState(null);
+```
 
 - **State Variables**:
 
@@ -981,21 +966,17 @@ const \[contractInstance, setContractInstance\] \= useState(null);
 
 #### Function: `connectWallet`
 
-const connectWallet \= async () \=> {
+```javascript
+const connectWallet = async () => {
+  try {
+    await initializeProvider();
 
-    try {
-
-      await initializeProvider();
-
-      setIsConnected(true);
-
-    } catch (error) {
-
-      console.error("Error connecting wallet:", error);
-
-    }
-
+    setIsConnected(true);
+  } catch (error) {
+    console.error("Error connecting wallet:", error);
+  }
 };
+```
 
 - **Purpose**: Initiates wallet connection and provider setup.
 - **Steps**:
@@ -1008,37 +989,26 @@ const connectWallet \= async () \=> {
 
 #### Function: `initializeProvider`
 
+```javascript
 async function initializeProvider() {
-
-    if (typeof window.ethereum !== "undefined") {
-
-      try {
-
-        provider \= new ethers.providers.Web3Provider(window.ethereum);
-
-        await provider.send("eth\_requestAccounts", \[\]);
-
-        signer \= provider.getSigner();
-
-        const contract \= new ethers.Contract(contractAddress, abi, signer);
-
-        await switchToBaseSepolia();
-
-        setContractInstance(contract); // Store contract in state
-
-      } catch (error) {
-
-        console.error("Error initializing provider:", error);
-
-      }
-
-    } else {
-
-      alert("No Ethereum provider detected. Please install MetaMask or another Ethereum wallet.");
-
+  if (typeof window.ethereum !== "undefined") {
+    try {
+      provider = new ethers.providers.Web3Provider(window.ethereum);
+      await provider.send("eth_requestAccounts", []);
+      signer = provider.getSigner();
+      const contract = new ethers.Contract(contractAddress, abi, signer);
+      await switchToBaseSepolia();
+      setContractInstance(contract); // Store contract in state
+    } catch (error) {
+      console.error("Error initializing provider:", error);
     }
-
+  } else {
+    alert(
+      "No Ethereum provider detected. Please install MetaMask or another Ethereum wallet."
+    );
+  }
 }
+```
 
 - **Purpose**: Sets up the ethers.js provider and signer, connects to the smart contract.
 - **Steps**:
@@ -1056,9 +1026,10 @@ async function initializeProvider() {
 
 #### Component: `StartCoinFlipButton`
 
+```javascript
 function StartCoinFlipButton({ contract }) {
-
-    const \[wager, setWager\] \= useState("");
+  const [wager, setWager] = useState("");
+```
 
 - **Purpose**: Provides an interface for users to start a new coin flip by entering a wager amount.
 - **Props**:
@@ -1069,39 +1040,27 @@ function StartCoinFlipButton({ contract }) {
 
   - **wager**: The amount of Ether the user wants to wager.
 
-  const startCoinFlip \= async () \=> {
-
+```javascript
+const startCoinFlip = async () => {
   if (!contract) {
-
-      console.error("Contract is not initialized");
-
-      return;
-
+    console.error("Contract is not initialized");
+    return;
   }
 
-  console.log(\`Starting Coin Flip\`);
-
-  console.log(\`Wager Amount: ${wager} ETH\`);
+  console.log(`Starting Coin Flip`);
+  console.log(`Wager Amount: ${wager} ETH`);
 
   try {
-
-      const transaction \= await contract.newCoinFlip({
-
-        value: ethers.utils.parseEther(wager),
-
-      });
-
-      await transaction.wait();
-
-      console.log(\`Coin flip started with a wager of ${wager} ETH!\`);
-
+    const transaction = await contract.newCoinFlip({
+      value: ethers.utils.parseEther(wager),
+    });
+    await transaction.wait();
+    console.log(`Coin flip started with a wager of ${wager} ETH!`);
   } catch (error) {
-
-      console.error("Error starting coin flip:", error);
-
+    console.error("Error starting coin flip:", error);
   }
-
-  };
+};
+```
 
 - **Purpose**: Calls the `newCoinFlip` function on the smart contract with the specified wager.
 - **Steps**:
@@ -1114,27 +1073,19 @@ function StartCoinFlipButton({ contract }) {
 
 #### Render Function for `StartCoinFlipButton`
 
-    return (
-
-      <div\>
-
-        <input
-
-          type\="number"
-
-          placeholder\="Enter Wager Amount in ETH"
-
-          value\={wager}
-
-          onChange\={(e) \=> setWager(e.target.value)}
-
-        /\>
-
-        <button onClick\={startCoinFlip}\>Start Coin Flip</button\>
-
-      </div\>
-
-    );
+```javascript
+return (
+  <div>
+    <input
+      type="number"
+      placeholder="Enter Wager Amount in ETH"
+      value={wager}
+      onChange={(e) => setWager(e.target.value)}
+    />
+    <button onClick={startCoinFlip}>Start Coin Flip</button>
+  </div>
+);
+```
 
 - **Components**:
 
@@ -1149,31 +1100,21 @@ function StartCoinFlipButton({ contract }) {
 
 #### Render Function of `App`
 
+```javascript
 return (
-
-    <div className\="App"\>
-
-      <h1\>Ether Coin Flip</h1\>
-
-      {!isConnected ? (
-
-        <button onClick\={connectWallet}\>Connect Wallet</button\>
-
-      ) : (
-
-        <\>
-
-          <StartCoinFlipButton contract\={contractInstance} /\>
-
-          <Dashboard contract\={contractInstance} /\>
-
-        </\>
-
-      )}
-
-    </div\>
-
+  <div className="App">
+    <h1>Ether Coin Flip</h1>
+    {!isConnected ? (
+      <button onClick={connectWallet}>Connect Wallet</button>
+    ) : (
+      <>
+        <StartCoinFlipButton contract={contractInstance} />
+        <Dashboard contract={contractInstance} />
+      </>
+    )}
+  </div>
 );
+```
 
 - **Components**:
 
@@ -1185,241 +1126,142 @@ return (
 
 And that is everything inside the `App.js` file! Here is all of it together:
 
+```javascript
 import React, { useState } from "react";
-
 import "./App.css";
-
 import ABI from "./components/ABI.json";
-
 import { ethers } from "ethers";
-
 import Dashboard from "./components/Dashboard.js";
 
-const contractAddress \= "0xd3037A0CFfADA943253A0CCc84593cd7b79E1ABd";
-
-const abi \= ABI;
+const contractAddress = "0xd3037A0CFfADA943253A0CCc84593cd7b79E1ABd";
+const abi = ABI;
 
 // Using Base Sepolia
+const baseSepoliaChainId = "84532";
 
-const baseSepoliaChainId \= "84532";
-
-const baseSepoliaParams \= {
-
-chainId: baseSepoliaChainId,
-
-chainName: "Base Sepolia",
-
-nativeCurrency: {
-
+const baseSepoliaParams = {
+  chainId: baseSepoliaChainId,
+  chainName: "Base Sepolia",
+  nativeCurrency: {
     name: "Sepolia ETH",
-
     symbol: "ETH",
-
     decimals: 18,
-
-},
-
-rpcUrls: \["https://sepolia.base.org"\],
-
-blockExplorerUrls: \["https://base-sepolia.blockscout.com/"\],
-
+  },
+  rpcUrls: ["https://sepolia.base.org"],
+  blockExplorerUrls: ["https://base-sepolia.blockscout.com/"],
 };
 
 let provider, signer;
 
 async function switchToBaseSepolia() {
-
-try {
-
-    const currentChainId \= await provider.send("eth\_chainId", \[\]);
+  try {
+    const currentChainId = await provider.send("eth_chainId", []);
 
     if (currentChainId !== baseSepoliaChainId) {
-
       try {
-
-        await provider.send("wallet\_switchEthereumChain", \[
-
+        await provider.send("wallet_switchEthereumChain", [
           { chainId: baseSepoliaChainId },
-
-        \]);
-
+        ]);
       } catch (switchError) {
-
-        if (switchError.code \=== 4902) {
-
+        if (switchError.code === 4902) {
           try {
-
-            await provider.send("wallet\_addEthereumChain", \[baseSepoliaParams\]);
-
+            await provider.send("wallet_addEthereumChain", [baseSepoliaParams]);
           } catch (addError) {
-
             console.error("Failed to add Base Sepolia network:", addError);
-
           }
-
         } else {
-
           console.error("Failed to switch to Base Sepolia:", switchError);
-
         }
-
       }
-
     }
-
-} catch (error) {
-
+  } catch (error) {
     console.error("Failed to get chain ID or switch network:", error);
-
-}
-
+  }
 }
 
 function App() {
+  const [isConnected, setIsConnected] = useState(false);
+  const [contractInstance, setContractInstance] = useState(null);
 
-const \[isConnected, setIsConnected\] \= useState(false);
-
-const \[contractInstance, setContractInstance\] \= useState(null);
-
-const connectWallet \= async () \=> {
-
+  const connectWallet = async () => {
     try {
-
       await initializeProvider();
-
       setIsConnected(true);
-
     } catch (error) {
-
       console.error("Error connecting wallet:", error);
-
     }
+  };
 
-};
-
-async function initializeProvider() {
-
+  async function initializeProvider() {
     if (typeof window.ethereum !== "undefined") {
-
       try {
-
-        provider \= new ethers.providers.Web3Provider(window.ethereum);
-
-        await provider.send("eth\_requestAccounts", \[\]);
-
-        signer \= provider.getSigner();
-
-        const contract \= new ethers.Contract(contractAddress, abi, signer);
-
+        provider = new ethers.providers.Web3Provider(window.ethereum);
+        await provider.send("eth_requestAccounts", []);
+        signer = provider.getSigner();
+        const contract = new ethers.Contract(contractAddress, abi, signer);
         await switchToBaseSepolia();
-
         setContractInstance(contract); // Store contract in state
-
       } catch (error) {
-
         console.error("Error initializing provider:", error);
-
       }
-
     } else {
-
       alert("MetaMask is not installed. Please install MetaMask.");
-
     }
+  }
 
-}
+  function StartCoinFlipButton({ contract }) {
+    const [wager, setWager] = useState("");
 
-function StartCoinFlipButton({ contract }) {
-
-    const \[wager, setWager\] \= useState("");
-
-    const startCoinFlip \= async () \=> {
-
+    const startCoinFlip = async () => {
       if (!contract) {
-
         console.error("Contract is not initialized");
-
         return;
-
       }
 
-      console.log(\`Starting Coin Flip\`);
-
-      console.log(\`Wager Amount: ${wager} ETH\`);
+      console.log(`Starting Coin Flip`);
+      console.log(`Wager Amount: ${wager} ETH`);
 
       try {
-
-        const transaction \= await contract.newCoinFlip({
-
+        const transaction = await contract.newCoinFlip({
           value: ethers.utils.parseEther(wager),
-
         });
-
         await transaction.wait();
-
-        console.log(\`Coin flip started with a wager of ${wager} ETH!\`);
-
+        console.log(`Coin flip started with a wager of ${wager} ETH!`);
       } catch (error) {
-
         console.error("Error starting coin flip:", error);
-
       }
-
     };
 
     return (
-
-      <div\>
-
+      <div>
         <input
-
-          type\="number"
-
-          placeholder\="Enter Wager Amount in ETH"
-
-          value\={wager}
-
-          onChange\={(e) \=> setWager(e.target.value)}
-
-        /\>
-
-        <button onClick\={startCoinFlip}\>Start Coin Flip</button\>
-
-      </div\>
-
+          type="number"
+          placeholder="Enter Wager Amount in ETH"
+          value={wager}
+          onChange={(e) => setWager(e.target.value)}
+        />
+        <button onClick={startCoinFlip}>Start Coin Flip</button>
+      </div>
     );
+  }
 
-}
-
-return (
-
-    <div className\="App"\>
-
-      <h1\>Ether Coin Flip</h1\>
-
+  return (
+    <div className="App">
+      <h1>Ether Coin Flip</h1>
       {!isConnected ? (
-
-        <button onClick\={connectWallet}\>Connect Wallet</button\>
-
+        <button onClick={connectWallet}>Connect Wallet</button>
       ) : (
-
-        <\>
-
-          <StartCoinFlipButton contract\={contractInstance} /\>
-
-          <Dashboard contract\={contractInstance} /\>
-
-        </\>
-
+        <>
+          <StartCoinFlipButton contract={contractInstance} />
+          <Dashboard contract={contractInstance} />
+        </>
       )}
-
-    </div\>
-
-);
-
+    </div>
+  );
 }
 
 export default App;
+```
 
 ---
 
@@ -1433,13 +1275,12 @@ It will also display a button for users to “end” a coin flip, with the ether
 
 ### **Designing a Dashboard in React**
 
-import React from 'react';
-
-import { useQuery } from '@tanstack/react-query';
-
-import { gql, request } from 'graphql-request';
-
-import { ethers } from 'ethers';
+```javascript
+import React from "react";
+import { useQuery } from "@tanstack/react-query";
+import { gql, request } from "graphql-request";
+import { ethers } from "ethers";
+```
 
 - **Imports**:
 
@@ -1452,49 +1293,30 @@ import { ethers } from 'ethers';
 
 #### GraphQL Query
 
-const query \= gql\`
-
-{
-
+```javascript
+const query = gql`
+  {
     startedCoinFlips(first: 10) {
-
       id
-
       theCoinFlipID
-
       theBetStarter
-
       theStartingWager
-
       blockNumber
-
       blockTimestamp
-
       isActive
-
       transactionHash
-
     }
-
     finishedCoinFlips(first: 10) {
-
       id
-
       theCoinFlipID
-
       winner
-
       loser
-
       blockNumber
-
       blockTimestamp
-
     }
-
-}
-
-\`;
+  }
+`;
+```
 
 - **Purpose**: Defines a GraphQL query to fetch the latest 10 started and finished coin flips from The Graph.
 - **Entities Queried**:
@@ -1506,7 +1328,9 @@ const query \= gql\`
 
 #### GraphQL API URL
 
-const url \= process.env.REACT_APP_THE_GRAPH_API_URL;
+```javascript
+const url = process.env.REACT_APP_THE_GRAPH_API_URL;
+```
 
 - **Purpose**: Retrieves the subgraph API URL from environment variables.
 
@@ -1514,19 +1338,15 @@ const url \= process.env.REACT_APP_THE_GRAPH_API_URL;
 
 #### Component: `Dashboard`
 
+```javascript
 export default function Dashboard({ contract }) {
-
-const { data, status } \= useQuery({
-
-    queryKey: \['activeCoinFlips'\],
-
+  const { data, status } = useQuery({
+    queryKey: ["activeCoinFlips"],
     async queryFn() {
-
       return await request(url, query);
-
     },
-
 });
+```
 
 - **Props**:
 
@@ -1546,63 +1366,52 @@ const { data, status } \= useQuery({
 
 #### Function: `endCoinFlip`
 
-const endCoinFlip \= async (coinFlipID, startingWager) \=> {
+```javascript
+const endCoinFlip = async (coinFlipID, startingWager) => {
+  if (!contract) {
+    console.error("Contract is not initialized");
+    return;
+  }
 
-    if (!contract) {
+  try {
+    // Parse coinFlipID to integer
+    const coinFlipIDInt = parseInt(coinFlipID);
+    // Ensure startingWager is a string representing the amount in wei
+    const wagerValue = ethers.BigNumber.from(startingWager.toString());
 
-      console.error("Contract is not initialized");
+    alert(
+      `Ending Coin Flip ID: ${coinFlipIDInt} with Wager: ${ethers.utils.formatEther(
+        wagerValue
+      )} ETH`
+    );
 
-      return;
+    const transaction = await contract.endCoinFlip(coinFlipIDInt, {
+      value: wagerValue,
+    });
+    await transaction.wait();
 
+    console.log(
+      `Coin flip with ID ${coinFlipIDInt} ended with a wager of ${ethers.utils.formatEther(
+        wagerValue
+      )} ETH!`
+    );
+
+    // Retrieve the details of the coin flip from the contract to check the winner/loser
+
+    const coinFlipDetails = await contract.EtherCoinFlipStructs(coinFlipIDInt);
+    const currentAddress = await contract.signer.getAddress();
+
+    if (coinFlipDetails.winner.toLowerCase() === currentAddress.toLowerCase()) {
+      alert("Congratulations! You won the coin flip!");
+    } else {
+      alert("Sorry, you lost the coin flip.");
     }
-
-    try {
-
-      // Parse coinFlipID to integer
-
-      const coinFlipIDInt \= parseInt(coinFlipID);
-
-      // Ensure startingWager is a string representing the amount in wei
-
-      const wagerValue \= ethers.BigNumber.from(startingWager.toString());
-
-      alert(\`Ending Coin Flip ID: ${coinFlipIDInt} with Wager: ${ethers.utils.formatEther(wagerValue)} ETH\`);
-
-      const transaction \= await contract.endCoinFlip(coinFlipIDInt, {
-
-        value: wagerValue,
-
-      });
-
-      await transaction.wait();
-
-      console.log(\`Coin flip with ID ${coinFlipIDInt} ended with a wager of ${ethers.utils.formatEther(wagerValue)} ETH!\`);
-
-      // Retrieve the details of the coin flip from the contract to check the winner/loser
-
-      const coinFlipDetails \= await contract.EtherCoinFlipStructs(coinFlipIDInt);
-
-      const currentAddress \= await contract.signer.getAddress();
-
-      if (coinFlipDetails.winner.toLowerCase() \=== currentAddress.toLowerCase()) {
-
-        alert("Congratulations! You won the coin flip!");
-
-      } else {
-
-        alert("Sorry, you lost the coin flip.");
-
-      }
-
-    } catch (error) {
-
-      console.error("Error ending coin flip:", error);
-
-      alert("Error ending coin flip. Please check the console for details.");
-
-    }
-
+  } catch (error) {
+    console.error("Error ending coin flip:", error);
+    alert("Error ending coin flip. Please check the console for details.");
+  }
 };
+```
 
 - **Purpose**: Allows the user to join an active coin flip by calling `endCoinFlip` on the smart contract.
 - **Steps**:
@@ -1625,25 +1434,23 @@ const endCoinFlip \= async (coinFlipID, startingWager) \=> {
 
 #### Function: `getActiveCoinFlips`
 
+```javascript
 // Function to filter active coin flips
+const getActiveCoinFlips = () => {
+  if (!data) return [];
 
-const getActiveCoinFlips \= () \=> {
+  const startedFlips = data.startedCoinFlips || [];
+  const finishedFlips = data.finishedCoinFlips || [];
 
-    if (!data) return \[\];
+  const finishedIDs = new Set(finishedFlips.map((flip) => flip.theCoinFlipID));
 
-    const startedFlips \= data.startedCoinFlips || \[\];
+  // Filter out finished coin flips
 
-    const finishedFlips \= data.finishedCoinFlips || \[\];
-
-    const finishedIDs \= new Set(finishedFlips.map(flip \=> flip.theCoinFlipID));
-
-    // Filter out finished coin flips
-
-    return startedFlips.filter(flip \=> !finishedIDs.has(flip.theCoinFlipID));
-
+  return startedFlips.filter((flip) => !finishedIDs.has(flip.theCoinFlipID));
 };
 
-const activeCoinFlips \= getActiveCoinFlips();
+const activeCoinFlips = getActiveCoinFlips();
+```
 
 - **Purpose**: Processes the fetched data to obtain a list of active coin flips.
 - **Steps**:
@@ -1658,107 +1465,56 @@ const activeCoinFlips \= getActiveCoinFlips();
 
 #### Render Function
 
+```javascript
 return (
-
-    <main\>
-
-      {status \=== 'loading' && <div\>Loading active coin flips...</div\>}
-
-      {status \=== 'error' && <div\>Error occurred querying the subgraph :/</div\>}
-
-      {status \=== 'success' && activeCoinFlips.length \> 0 ? (
-
-        <table\>
-
-          <thead\>
-
-            <tr\>
-
-              <th\>Coin Flip ID</th\>
-
-              <th\>Bet Starter</th\>
-
-              <th\>Wager</th\>
-
-              <th\>Action</th\>
-
-              <th\>Transaction</th\>
-
-            </tr\>
-
-          </thead\>
-
-          <tbody\>
-
-            {activeCoinFlips.map((flip) \=> (
-
-              <tr key\={flip.id}\>
-
-                <td\>{flip.theCoinFlipID}</td\>
-
-                <td\>{flip.theBetStarter}</td\>
-
-                <td\>{ethers.utils.formatEther(flip.theStartingWager)} ETH</td\>
-
-                <td\>
-
-                  <button
-
-                    onClick\={() \=>
-
-                      endCoinFlip(
-
-                        flip.theCoinFlipID,
-
-                        flip.theStartingWager
-
-                      )
-
-                    }
-
-                  \>
-
-                    End Coin Flip
-
-                  </button\>
-
-                </td\>
-
-                <td\>
-
-                  <a
-
-                    href\={\`https://base-sepolia.blockscout.com/tx/${flip.transactionHash}\`}
-
-                    target\="\_blank"
-
-                    rel\="noopener noreferrer"
-
-                  \>
-
-                    View on Block Explorer
-
-                  </a\>
-
-                </td\>
-
-              </tr\>
-
-            ))}
-
-          </tbody\>
-
-        </table\>
-
-      ) : (
-
-        <p\>No active coin flips available D:</p\>
-
-      )}
-
-    </main\>
-
+  <main>
+    {status === "loading" && <div>Loading active coin flips...</div>}
+    {status === "error" && <div>Error occurred querying the subgraph :</div>}
+    {status === "success" && activeCoinFlips.length > 0 ? (
+      <table>
+        <thead>
+          <tr>
+            <th>Coin Flip ID</th>
+            <th>Bet Starter</th>
+            <th>Wager</th>
+            <th>Action</th>
+            <th>Transaction</th>
+          </tr>
+        </thead>
+        <tbody>
+          {activeCoinFlips.map((flip) => (
+            <tr key={flip.id}>
+              <td>{flip.theCoinFlipID}</td>
+              <td>{flip.theBetStarter}</td>
+              <td>{ethers.utils.formatEther(flip.theStartingWager)} ETH</td>
+              <td>
+                <button
+                  onClick={() =>
+                    endCoinFlip(flip.theCoinFlipID, flip.theStartingWager)
+                  }
+                >
+                  End Coin Flip
+                </button>
+              </td>
+              <td>
+                <a
+                  href={`https://base-sepolia.blockscout.com/tx/${flip.transactionHash}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View on Block Explorer
+                </a>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    ) : (
+      <p>No active coin flips available D:</p>
+    )}
+  </main>
 );
+```
 
 - **Conditional Rendering**:
 
@@ -1788,7 +1544,9 @@ In order to run the website locally, complete the following steps:
 
 1.  Start the development server
 
+```
 npm start
+```
 
 1.  In your browser, open http://localhost:3000
 2.  Connect your wallet
@@ -1799,7 +1557,7 @@ npm start
 
 Now, your should have the site running locally and connected to Base Sepolia via ethers.js!
 
-![](./The Complete Guide to Building a Full-Stack Web3 Dapp on Base L2 _ Blog _ The Graph_files/Screenshot_2024-11-27_at_4.51.28_PM.png)
+![](./images/Screenshot_2024-11-27_at_4.51.28_PM.png)
 
 ## **Final Thoughts**
 
@@ -1814,3 +1572,11 @@ Discover more about how The Graph is shaping the future of decentralized physica
 [The Graph Foundation](https://thegraph.com/blog/announcing-the-graph-foundation/)  oversees The Graph Network.  [Edge & Node](https://edgeandnode.com/),  [StreamingFast](https://streamingfast.io/),  [Semiotic Labs](https://www.semiotic.ai/),  [GraphOps](https://graphops.xyz/),  [Pinax](https://pinax.network/en)   [Wonderland](https://defi.sucks/)  and  [Geo](https://www.geobrowser.io/)  are seven of the many organizations within The Graph ecosystem.
 
 ---
+
+```
+
+```
+
+```
+
+```
