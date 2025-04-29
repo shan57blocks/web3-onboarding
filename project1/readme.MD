@@ -1558,25 +1558,3 @@ npm start
 Now, your should have the site running locally and connected to Base Sepolia via ethers.js!
 
 ![](./images/Screenshot_2024-11-27_at_4.51.28_PM.png)
-
-## **Final Thoughts**
-
-The world of decentralized applications is vast and full of opportunities. With the knowledge and experience gained from this tutorial, you're well-equipped to innovate and contribute to the evolving web3 ecosystem.
-
-## **About The Graph**
-
-[The Graph](https://thegraph.com/)  is the leading indexing and query protocol powering the decentralized internet. Launched in 2018, it has enabled tens of thousands of developers to effortlessly build  [Subgraphs](https://thegraph.com/docs/quick-start)  and   [Substreams](https://thegraph.com/docs/en/substreams/introduction/)  across countless blockchains, including Ethereum, Solana, Arbitrum, Optimism, Base, Polygon, Celo, Soneium, and Avalanche.
-
-Discover more about how The Graph is shaping the future of decentralized physical infrastructure networks (DePIN) and stay connected with the community. Follow The Graph on  [X](https://twitter.com/graphprotocol?s=20),  [LinkedIn](https://www.linkedin.com/company/thegraph/),  [Instagram](https://www.instagram.com/graphprotocol/?hl=en),  [Facebook](https://www.facebook.com/TheGraphProtocol),  [Reddit](https://www.reddit.com/r/thegraph/),  [Farcaster](https://warpcast.com/graphprotocol)  and  [Medium](https://medium.com/graphprotocol). Join the community on The Graph’s  [Telegram](https://t.me/GraphProtocol), join technical discussions on The Graph’s  [Discord](https://discord.com/invite/vtvv7FP).
-
-[The Graph Foundation](https://thegraph.com/blog/announcing-the-graph-foundation/)  oversees The Graph Network.  [Edge & Node](https://edgeandnode.com/),  [StreamingFast](https://streamingfast.io/),  [Semiotic Labs](https://www.semiotic.ai/),  [GraphOps](https://graphops.xyz/),  [Pinax](https://pinax.network/en)   [Wonderland](https://defi.sucks/)  and  [Geo](https://www.geobrowser.io/)  are seven of the many organizations within The Graph ecosystem.
-
----
-
-```
-
-```
-
-```
-
-```
