@@ -58,6 +58,8 @@ Follow the tutorial in project1/readme.MD to build a full-stack web3 dapp on Bas
 
 ### Implementing Uniswap v2 on Solana
 
+[Uniswap v2](https://github.com/Uniswap/v2-core)
+
 1. **Project Plan** (2 days)
 
    - Define project scope and deliverables
