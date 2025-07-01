@@ -23,7 +23,7 @@ Implementing a Solana version of the Coin Flip dapp.
 
 1. **Testing and Optimization**
 
-   - Write comprehensive tests for both implementations
+   - Write comprehensive tests for both implementations with AI assistance (Cursor/ChatGPT)
    - Compare gas costs/transaction fees between platforms
    - Optimize for lower costs and better performance
 

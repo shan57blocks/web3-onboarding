@@ -31,7 +31,7 @@
 
 4. **Comprehensive Testing** (2 weeks in middle)
 
-   - Develop unit tests for all program functions (100% coverage)
+   - Develop unit tests for all program functions with AI assistance (Cursor/ChatGPT) (100% coverage)
    - Create integration tests for cross-program interactions
    - Implement invariant testing for constant product formula
    - Create test suite for edge cases and attack vectors
