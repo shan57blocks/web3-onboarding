@@ -1,4 +1,4 @@
-# The Complete Guide to Building a Full-Stack Web3 Dapp on Base L2
+# Phase 1: Build a Full-Stack Web3 Dapp on Base L2 (2 days)
 
 Get started and build a full stack web3 dapp on Coinbase’s powerful L2, [Base](https://www.base.org/). Follow this tutorial and check out all the code for this project [here](https://github.com/MichaelMacaulay/Tutorial-Ether-Coin-Flip).
 
