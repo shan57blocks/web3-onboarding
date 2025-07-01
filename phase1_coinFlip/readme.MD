@@ -593,7 +593,27 @@ contract EtherCoinFlip {
 }
 ```
 
-Next, we can begin testing the smart contract on testnet using Ethereum Remix!
+## Alternative: Using Hardhat for Smart Contract Development
+
+While this tutorial uses [Ethereum Remix](https://remix.ethereum.org/) for simplicity, you can also use [Hardhat](https://hardhat.org/) as a more professional development environment. Hardhat is a popular development framework for Ethereum that provides advanced features for testing, debugging, and deploying smart contracts.
+
+### Why Choose Hardhat?
+
+- **Local Development Environment**: Develop and test contracts locally before deploying to testnet
+- **Advanced Testing Framework**: Built-in support for comprehensive unit and integration testing
+- **Professional Tooling**: Better debugging capabilities, console logging, and error messages
+- **Version Control Friendly**: All configuration and code in files that can be committed to git
+- **Plugin Ecosystem**: Extensive plugins for verification, gas reporting, and more
+
+### Hardhat Resources
+
+- **Official Documentation**: [https://hardhat.org/docs](https://hardhat.org/docs)
+- **Hardhat Tutorial**: [https://hardhat.org/tutorial](https://hardhat.org/tutorial)
+- **Base Network Guide**: [https://docs.base.org/guides/deploy-smart-contracts](https://docs.base.org/guides/deploy-smart-contracts)
+
+For this tutorial, we'll continue with Remix for its simplicity and browser-based interface, but Hardhat is an excellent choice for more complex projects and professional development workflows.
+
+---
 
 ### Testing your Base smart contract in Ethereum Remix
 
